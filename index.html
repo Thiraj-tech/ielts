@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IELTS Planner</title>
+  <link rel="icon" href="icons/icon48.png">
+  <meta name="description" content="Personal 90-day IELTS Academic study planner">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="planner">
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="brand"><img src="icons/icon48.png" alt="" width="28" height="28"><span>IELTS 90</span></div>
+      <ul id="nav" class="nav"></ul>
+      <div id="side-progress" class="side-progress"></div>
+    </nav>
+    <main id="main" tabindex="-1"></main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="reset-dialog" aria-labelledby="reset-title">
+    <form method="dialog">
+      <h2 id="reset-title">Reset all progress?</h2>
+      <p>This permanently deletes completed days, notes, scores and mistake journal entries, and restarts the plan from today. Export a backup first if you might want this data again.</p>
+      <div class="dialog-actions">
+        <button class="btn" value="cancel" autofocus>Cancel</button>
+        <button class="btn btn-danger" value="confirm">Delete everything</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="src/planner.js"></script>
+</body>
+</html>
